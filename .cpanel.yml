@@ -5,3 +5,5 @@ deployment:
     - /bin/cp -f index.html contact.php robots.txt $DEPLOYPATH
     - /bin/mkdir -p ${DEPLOYPATH}images
     - /bin/cp -Rf images/. ${DEPLOYPATH}images/
+    - /bin/mkdir -p ${DEPLOYPATH}fonts
+    - /bin/cp -Rf fonts/. ${DEPLOYPATH}fonts/

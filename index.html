@@ -13,9 +13,11 @@
   MODE D'EMPLOI (pour Fanny)
   - Tes dessins : enregistre-les en PNG (fond transparent) dans "images/", puis remplace chaque
     bloc <div class="illu">…</div> par <img class="illu-img" src="images/NOM.png" alt="…">.
-  - Ta police manuscrite (Calligraphr) : remplace "Caveat" par son nom dans --main.
+  - Ta police manuscrite (Calligraphr) est dans "fonts/". Pour la mettre à jour, remplace
+    fanny-main.woff et fanny-main.ttf par la nouvelle version (mêmes noms).
   - Les couleurs se changent ici, dans :root.
 */
+@font-face{font-family:"Fanny Main";src:url("fonts/fanny-main.woff") format("woff"),url("fonts/fanny-main.ttf") format("truetype");font-display:swap}
 :root{
   --cerise:#B3122E;
   --cerise-fonce:#8C0D23;
@@ -30,7 +32,7 @@
   --encre:#2F2326;
   --gris:#76686B;
   --titre:"Bricolage Grotesque",system-ui,sans-serif;
-  --main:"Caveat",cursive;
+  --main:"Fanny Main","Caveat",cursive;
   --rayon:26px;
 }
 *{box-sizing:border-box}
@@ -251,6 +253,9 @@ footer .brandf{font-family:var(--main);font-size:1.5rem;color:var(--peche)}
   .step .dot,.step .card{opacity:1;transform:none;transition:none}
   .fab{transition:none}
 }
+
+/* Ta police : lettres un peu resserrées pour que l'écriture soit bien liée, pas de faux gras */
+.kicker,.illu,.hero h1 .script,.hero-visual .note,.breathe strong,.offer.star::before,.logo-note,.swipe-hint,.work .meta,.step .card .num,.about .punch,.signature,footer .brandf{letter-spacing:-.03em;font-synthesis:none}
 </style>
 </head>
 <body>
