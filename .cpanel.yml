@@ -5,3 +5,5 @@ deployment:
     - /bin/cp -f index.html $DEPLOYPATH
     - /bin/mkdir -p ${DEPLOYPATH}fonts
     - /bin/cp -Rf fonts/. ${DEPLOYPATH}fonts/
+    - /bin/mkdir -p ${DEPLOYPATH}hw
+    - /bin/cp -Rf hw/. ${DEPLOYPATH}hw/
