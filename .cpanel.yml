@@ -3,3 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/nize7310/public_html/
     - /bin/cp -f index.html $DEPLOYPATH
+    - /bin/mkdir -p ${DEPLOYPATH}fonts
+    - /bin/cp -Rf fonts/. ${DEPLOYPATH}fonts/
