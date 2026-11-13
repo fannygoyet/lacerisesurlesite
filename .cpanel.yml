@@ -1,5 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/nize7310/public_html/
-    - /bin/cp -f index.html $DEPLOYPATH
+    - export DEPLOYPATH=/home/nize7310/staging.lacerisesurlesite.fr/
+    - /bin/cp -f index.html contact.php robots.txt $DEPLOYPATH
+    - /bin/mkdir -p ${DEPLOYPATH}images
+    - /bin/cp -Rf images/. ${DEPLOYPATH}images/
