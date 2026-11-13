@@ -267,6 +267,13 @@ footer .brandf{font-family:var(--main);font-size:1.5rem;color:var(--peche)}
 .offer.star::after{content:"";position:absolute;top:-1.3rem;right:calc(22px + .5rem);width:7.6rem;height:2.4rem;background:#fff;-webkit-mask:url('hw/10-la-plus-choisie.png') center/contain no-repeat;mask:url('hw/10-la-plus-choisie.png') center/contain no-repeat;z-index:2}
 .about > *,.about-text{min-width:0}
 @media (max-width:820px){.about .punch{font-size:1.45rem}}
+
+/* Illustrations aquarelle */
+.illu-hero{display:block;width:88%;max-width:380px;margin:0 auto;filter:drop-shadow(0 18px 28px rgba(140,13,35,.18))}
+.illu-offer{display:block;width:150px;max-width:100%;aspect-ratio:1/1;object-fit:contain;margin:0 auto 14px}
+.illu-portrait{display:block;width:100%;max-width:340px;border-radius:var(--rayon);box-shadow:0 18px 40px rgba(79,107,75,.22);transform:rotate(-2deg)}
+.illu-small{display:block;width:120px;margin-top:20px;transform:rotate(8deg)}
+@media (max-width:820px){.illu-offer{width:84px;margin-bottom:6px}.illu-portrait{margin:0 auto;max-width:280px}}
 </style>
 </head>
 <body>
@@ -319,7 +326,7 @@ footer .brandf{font-family:var(--main);font-size:1.5rem;color:var(--peche)}
     </div>
     <div class="hero-visual">
       <!-- DESSIN : images/cerise-grande.png -->
-      <div class="illu" role="img" aria-label="Emplacement pour le dessin de la cerise"><div><span>🍒</span>Ici : ton grand dessin de cerise</div></div>
+      <img class="illu-img illu-hero" src="images/cerise-grande.webp" alt="Une cerise à l'aquarelle" fetchpriority="high" decoding="async">
       <div class="float-card glass fc1" aria-hidden="true"><span class="ic" style="background:var(--rose-clair)">📩</span><div>Nouvelle demande<small>de rendez-vous</small></div></div>
       <div class="float-card glass fc2" aria-hidden="true"><span class="ic" style="background:var(--sauge-clair)">✓</span><div>Fiche Google<small>en ligne</small></div></div>
       <span class="note" aria-hidden="true"><span class="hw" style="--src:url('hw/09-oui-c-est-une-cerise.png');--r:6.038" aria-hidden="true"></span></span>
@@ -362,7 +369,7 @@ footer .brandf{font-family:var(--main);font-size:1.5rem;color:var(--peche)}
     <div class="offers">
       <article class="offer glass">
         <!-- DESSIN : images/tartelette.png -->
-        <div class="illu" role="img" aria-label="Emplacement pour le dessin de la tartelette"><div><span>🥧</span>Ton dessin : la tartelette</div></div>
+        <img class="illu-img illu-offer" src="images/tartelette.webp" alt="Une tartelette aux cerises" loading="lazy" decoding="async">
         <h3>La Tartelette</h3>
         <p class="for">Pour être visible sur Internet et te lancer</p>
         <ul>
@@ -374,7 +381,7 @@ footer .brandf{font-family:var(--main);font-size:1.5rem;color:var(--peche)}
       </article>
       <article class="offer glass star">
         <!-- DESSIN : images/clafoutis.png -->
-        <div class="illu" role="img" aria-label="Emplacement pour le dessin du clafoutis"><div><span>🍒</span>Ton dessin : le clafoutis</div></div>
+        <img class="illu-img illu-offer" src="images/clafoutis.webp" alt="Un clafoutis aux cerises" loading="lazy" decoding="async">
         <h3>Le Clafoutis</h3>
         <p class="for">Ton site complet</p>
         <ul>
@@ -386,7 +393,7 @@ footer .brandf{font-family:var(--main);font-size:1.5rem;color:var(--peche)}
       </article>
       <article class="offer glass">
         <!-- DESSIN : images/piece-montee.png -->
-        <div class="illu" role="img" aria-label="Emplacement pour le dessin de la pièce montée"><div><span>🎂</span>Ton dessin : la pièce montée</div></div>
+        <img class="illu-img illu-offer" src="images/piece-montee.webp" alt="Une pièce montée aux cerises" loading="lazy" decoding="async">
         <h3>La Pièce Montée</h3>
         <p class="for">Ton outil sur mesure</p>
         <ul>
@@ -485,7 +492,7 @@ footer .brandf{font-family:var(--main);font-size:1.5rem;color:var(--peche)}
   <span class="sprinkle bar" style="background:var(--sauge);bottom:20%;left:6%;--r:-30deg;animation-delay:-3s"></span>
   <div class="wrap about-grid">
     <!-- DESSIN : images/autoportrait.png -->
-    <div class="illu" role="img" aria-label="Emplacement pour l'autoportrait dessiné"><div><span>👩‍💻</span>Ici : ton autoportrait dessiné</div></div>
+    <img class="illu-img illu-portrait" src="images/autoportrait.webp" alt="Portrait de Fanny à l'aquarelle" loading="lazy" decoding="async">
     <div>
       <span class="kicker"><span class="hw" style="--src:url('hw/07-enchantee.png');--r:2.389" aria-hidden="true"></span><span class="sr">Enchantée !</span></span>
       <h2 id="t-about">Qui se cache derrière la <span class="squiggle">cerise</span> ?</h2>
@@ -511,7 +518,7 @@ footer .brandf{font-family:var(--main);font-size:1.5rem;color:var(--peche)}
       <p>Raconte-moi ton projet en quelques mots, je te réponds sous 48 h.</p>
       <p>Ou écris-moi directement :<br><a href="mailto:bonjour@lacerisesurlesite.fr">bonjour@lacerisesurlesite.fr</a></p>
       <!-- DESSIN : images/petite-cerise.png -->
-      <div class="illu" role="img" aria-label="Emplacement pour une petite cerise"><div><span>🍒</span>Petite cerise</div></div>
+      <img class="illu-img illu-small" src="images/petite-cerise.webp" alt="" loading="lazy" decoding="async">
     </div>
     <form class="glass" action="contact.php" method="post">
       <p class="ok" id="ok" role="status">Merci ! Ton message est bien arrivé, je te réponds très vite. 🍒</p>
