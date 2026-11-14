@@ -9,3 +9,6 @@ deployment:
     - /bin/cp -Rf hw/. ${DEPLOYPATH}hw/
     - /bin/mkdir -p ${DEPLOYPATH}images
     - /bin/cp -Rf images/. ${DEPLOYPATH}images/
+    - /bin/cp -f favicon.ico $DEPLOYPATH
+    - /bin/mkdir -p ${DEPLOYPATH}favicons
+    - /bin/cp -Rf favicons/. ${DEPLOYPATH}favicons/
